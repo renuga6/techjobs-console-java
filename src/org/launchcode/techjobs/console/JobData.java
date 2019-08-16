@@ -79,10 +79,10 @@ public class JobData {
                 String job = "";
                 for (Map.Entry<String, String> entry : allJobs.get(i).entrySet()) {
                     Object cell_val = entry.getValue();
+                    job = job.toLowerCase();
+
                     job = job + " " + cell_val;
                 }
-                job = job.toLowerCase();
-
                 if (job.contains(value)) {
                     jobs.add(allJobs.get(i));
                 }
